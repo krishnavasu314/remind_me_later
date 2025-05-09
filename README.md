@@ -1,3 +1,4 @@
+
 # 🕒 Remind-me-later API (Django)
 
 This is a simple backend API built using Django to support a **reminder web app**.  
@@ -11,84 +12,101 @@ It allows users to set a reminder with:
 
 ---
 
-##  How to Run Locally
+## 🚀 How to Run Locally
 
 ### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/remind-me-later.git
 cd remind-me-later
+```
 
+### 2. Set Up Virtual Environment
 
-2. Set Up Virtual Environment
-
+```bash
 python -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
+```
 
-3. Install Dependencies
+### 3. Install Dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-4. Apply Migrations
+### 4. Apply Migrations
 
+```bash
 python manage.py makemigrations
 python manage.py migrate
+```
 
-5. Start the Server
+### 5. Start the Server
 
-
+```bash
 python manage.py runserver
-Open: http://127.0.0.1:8000/api/reminders/
+```
 
-API Endpoint
-Method	Endpoint	Description
-POST	/api/reminders/	Create a reminder
+Open your browser at:  
+👉 `http://127.0.0.1:8000/api/reminders/`
 
- Example POST Body (JSON)
+---
 
+## 📮 API Endpoint
 
+| Method | Endpoint           | Description        |
+|--------|--------------------|--------------------|
+| POST   | `/api/reminders/`  | Create a reminder  |
+
+### Example POST Body (JSON)
+
+```json
 {
   "date": "2025-05-10",
   "time": "14:30:00",
   "message": "Team meeting at 2:30 PM",
   "method": "email"
 }
+```
 
+---
 
-🛠 Tech Stack
-Python
+## 🛠 Tech Stack
 
-Django
+- Python
+- Django
+- SQLite (default database)
 
-SQLite (default database)
+---
 
-📁 Project Structure
+## 📁 Project Structure
 
-
+```
 remind_me_later/
 ├── reminders/           # App with models, views, and URLs
 ├── remind_me_later/     # Project settings and main URLs
 ├── manage.py
 ├── db.sqlite3
 └── .gitignore
+```
 
+---
 
- Author
-Vasu Krishna
+## 👤 Author
+
+**Vasu Krishna**  
 📧 vasukrishna2002@gmail.com
 
-✅ To Do
+---
 
+## ✅ To Do
 
- Add frontend integration
+- [ ] Add frontend integration
+- [ ] Add support for actual reminder delivery via SMS/Email
+- [ ] Add authentication
 
- Add support for actual reminder delivery via SMS/Email
+---
 
- Add authentication
+## 📄 License
 
-📄 License
 This project is for assessment/demo purposes only.
-
-
-
-
