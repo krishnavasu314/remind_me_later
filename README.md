@@ -109,4 +109,4 @@ remind_me_later/
 
 ## 📄 License
 
-This project is for assessment/demo purposes only.
+This project is for assessment purposes only.
