@@ -25,7 +25,7 @@ cd remind-me-later
 
 ```bash
 python -m venv env
-source env/bin/activate  # On Windows: env\Scripts\activate
+env\Scripts\activate
 ```
 
 ### 3. Install Dependencies
