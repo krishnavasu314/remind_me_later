@@ -11,7 +11,7 @@ It allows users to set a reminder with:
 
 ---
 
-## 🚀 How to Run Locally
+##  How to Run Locally
 
 ### 1. Clone the Repository
 
@@ -21,10 +21,74 @@ cd remind-me-later
 
 
 2. Set Up Virtual Environment
-bash
-Copy
-Edit
+
 python -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
+
+3. Install Dependencies
+
+pip install -r requirements.txt
+
+4. Apply Migrations
+
+python manage.py makemigrations
+python manage.py migrate
+
+5. Start the Server
+
+
+python manage.py runserver
+Open: http://127.0.0.1:8000/api/reminders/
+
+API Endpoint
+Method	Endpoint	Description
+POST	/api/reminders/	Create a reminder
+
+ Example POST Body (JSON)
+
+
+{
+  "date": "2025-05-10",
+  "time": "14:30:00",
+  "message": "Team meeting at 2:30 PM",
+  "method": "email"
+}
+
+
+🛠 Tech Stack
+Python
+
+Django
+
+SQLite (default database)
+
+📁 Project Structure
+
+
+remind_me_later/
+├── reminders/           # App with models, views, and URLs
+├── remind_me_later/     # Project settings and main URLs
+├── manage.py
+├── db.sqlite3
+└── .gitignore
+
+
+ Author
+Vasu Krishna
+📧 vasukrishna2002@gmail.com
+
+✅ To Do
+
+
+ Add frontend integration
+
+ Add support for actual reminder delivery via SMS/Email
+
+ Add authentication
+
+📄 License
+This project is for assessment/demo purposes only.
+
+
 
 
